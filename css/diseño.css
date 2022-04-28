@@ -1,6 +1,8 @@
-body{
+.body{
     font-family: 'Roboto', sans-serif; color: #cdda60; 
-    background-color: black;
+    background-color: black; 
+    display: flex;
+    flex-direction: column; 
 }
 h1{
     background-color: black;
@@ -19,10 +21,10 @@ a{
     text-decoration: none;
     margin-left: 10px;
     margin-right: 10px; 
-
 } 
-.separacion{
-    margin: 10px 10px 5px 10px
+.separacion{ 
+    border-radius: 5px;
+    margin: 10px 10px 5px 10px 
 }
 .centro{
     text-align: center;
@@ -33,49 +35,104 @@ a{
 }
 .header{
     position: fixed;
-    z-index: 10px;
+    z-index: 11;
     background-color: black;
-    width: 100%; 
-    padding: 10px; 
-    top: 0%; 
-    height: 125px; 
+    width: 100%;  
+    top: 0%;   
 } 
+.logopagina{
+    margin: 5px;
+}
 .header__hijo--1{
     list-style: none;
     display: flex;
-    margin: 1rem; 
+    margin: 1rem 1rem 1rem 10rem ; 
     bottom: 100%  
 } 
-.flexHeader{
+.flexHeader{ 
     display: flex;
     flex-direction:row; 
-    align-items: center;
+    align-items: center; 
 } 
 .flexHeader__hijo--1{
     margin-left: 10px;
-    margin-right: 200px;
-}
+} 
 .main{
     padding-top: 10rem;
+}   
+.section{
+    width: 100%; 
+    margin-bottom: 125px;
+}
+.grid{
+    padding: 1rem ; 
+    min-height: 500px;
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "ele1 ele2 ele3"
+    "ele1 ele4 ele5";
+}
+.grid__hijo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+}
+.grid__titulo{
+    position:absolute; 
+    align-items: center; 
+    bottom: 0%;
+    right: 0%;
+    background-color: rgba(0,0,0,0.4);
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none; 
+    right: 0%;
+}
+.grid__hijo--1{
+    grid-area: ele1;  
 }  
+.imagecover{
+    object-fit: cover;
+}
+.grid__hijo--2{
+    grid-area: ele2;
+}
+.grid__hijo--3{ 
+
+    grid-area: ele3;
+}
+.grid__hijo--4{ 
+
+    grid-area: ele4;
+}
+.grid__hijo--5{ 
+
+    grid-area: ele5
+}
 .parrafo{
     width: 250px;
     height: 400px; 
     bottom: 0%; 
-    text-align: center; 
-
-
+    text-align: center;
 } 
 .imagenflex{
     display: flex;
     flex-direction:row; 
-    align-items:center; 
-    width: 50%; 
-    margin-left: 25%;
+
 } 
 .imagenflex__hijo--1{
-    margin: 10px; 
+    margin: 10px 10px 10px 100px; 
     border-radius: 5px; 
+} 
+.titulostextos{
+    text-align: center;
+    font-size: 20px;
 }
 iframe{
     margin-left: 200px; 
@@ -87,8 +144,12 @@ iframe{
     border-radius: 5px;
     padding: 10px 10px 10px 10px; 
     width: 600px;
-    border-style: double;
-    margin: 10px 10px 10px 10px;
+    border-style: double; 
+    margin: auto;
+} 
+.casillaform{
+    border-radius: 5px;
+    border: 2px;
 }
 .whatsap{
     position: fixed;
@@ -105,12 +166,89 @@ iframe{
 .flex{
     display: flex;
     flex-direction: row;
-    padding: 10px;
     width: 100%;
     justify-content:stretch; 
-    align-items: center;
+    align-items: center; 
+    margin-bottom: 125px;
 } 
 .flex__hijo--1{
     margin: 1rem; 
     border-radius: 10px;
+}  
+.header-icon{
+    color: aliceblue; 
+    display: none;
+} 
+.footer-redes{
+    display: flex;
+    flex-direction: row;
+} 
+.targets-footer{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+@media screen and (max-width: 1023px) {
+    .body{
+    }  
+    .header-icon{
+        color: aliceblue; 
+        display:block; 
+        font-size: 20px;
+    }
+    .header{
+        height: auto; 
+        padding: 0%;
+        
+    } 
+    .flexHeader__hijo--1{
+        height:10px; 
+        padding: 10px; 
+        margin-right: 10px;
+    } 
+    .flexHeader{
+        align-items: center; 
+    }  
+    .flex{
+        flex-direction: column;
+    } 
+    .header__hijo--1{
+        display: none;
+    }
+} 
+paginacultura 
+.divtextosculturaflex{
+    display: flex;
+    flex-direction: column;
+} 
+.divtextoyparrafo{
+    display: flex ; 
+    flex-direction: row;
+} 
+.imageninformativa{ 
+    
+}
+.parrafoinformativo{}
+@media screen and (max-width: 600px) {
+    .body{
+    } 
+    .header{
+        height: auto; 
+        padding: 0%;
+        
+    }
+    .flexHeader{ 
+    } 
+    .flexHeader__hijo--1{
+        height:5px; 
+        padding: 5px; 
+        margin: 5px;
+    }     
+    .header__hijo--1{ 
+        display: none;
+    }
+    .flex{
+        display: flex; 
+        align-items: center; 
+        flex-direction: column;
+    } 
 } 
